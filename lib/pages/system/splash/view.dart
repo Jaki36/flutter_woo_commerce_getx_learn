@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'package:get/get.dart';
 
 import 'index.dart';
@@ -16,17 +17,9 @@ class SplashPage extends GetView<SplashController> {
           id: "splash_title",
           builder: (_) {
             return Center(
-              child: Text(controller.title),
+              child: Text("SplashPage - ${ConfigService.to.version}"),
             );
           },
-        ),
-
-        // 按钮
-        ElevatedButton(
-          onPressed: () {
-            controller.onTap(DateTime.now().microsecondsSinceEpoch);
-          },
-          child: const Text("立刻点击"),
         ),
       ],
     );
