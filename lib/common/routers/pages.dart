@@ -1,6 +1,7 @@
 
 import 'package:get/get.dart';
 
+import '../../pages/splash/index.dart';
 import '../../pages/system/login/index.dart';
 
 class RoutePages {
@@ -10,6 +11,10 @@ class RoutePages {
       name: "/",
       page: () => const LoginPage(),
       binding: LoginBinding(),
+    ),
+    GetPage(
+      name: "/splash",
+      page: () => const SplashPage(),
     ),
   ];
 }
