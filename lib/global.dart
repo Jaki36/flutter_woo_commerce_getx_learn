@@ -11,5 +11,7 @@ class Global {
       Get.putAsync<ConfigService>(() async => await ConfigService().init()),
     ]).whenComplete(() {
     });
+    // 工具类
+    await Storage().init();
   }
 }
