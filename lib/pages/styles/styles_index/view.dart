@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../common/i18n/locale_keys.dart';
-import '../../../common/services/config.dart';
+import '../../../common/index.dart';
 import 'index.dart';
 
 class StylesIndexPage extends GetView<StylesIndexController> {
@@ -25,6 +24,10 @@ class StylesIndexPage extends GetView<StylesIndexController> {
             "主题 : ${ConfigService.to.isDarkModel ? "Dark" : "Light"}",
             style: TextStyle(color:Colors.blue)
         ),
+      ),
+      ListTile(
+        title:  TextWidget.title1("Text 文本",color: Colors.blue,),
+
       ),
     ]);
   }
