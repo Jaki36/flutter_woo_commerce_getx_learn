@@ -29,4 +29,5 @@ class RouteNames {
   static const systemWelcome = '/system_welcome';
   static const stylesIcon = '/styles_icon';
   static const stylesImage = '/styles_image';
+  static const stylesButtons = '/styles_buttons';
 }
