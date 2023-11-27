@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'common/index.dart';
+import 'common/services/index.dart';
 
 class Global {
   static Future<void> init() async {
@@ -13,5 +14,6 @@ class Global {
     });
     // 工具类
     await Storage().init();
+    Get.put<WPHttpService>(WPHttpService());
   }
 }
