@@ -19,6 +19,7 @@ class RouteNames {
   static const myTheme = '/my_theme';
   static const searchSearchFilter = '/search_search_filter';
   static const searchSearchIndex = '/search_search_index';
+  static const stylesStylesIndex = '/styles_styles_index';
   static const systemLogin = '/system_login';
   static const systemMain = '/system_main';
   static const systemRegister = '/system_register';
@@ -26,5 +27,4 @@ class RouteNames {
   static const systemSplash = '/system_splash';
   static const systemUserAgreement = '/system_user_agreement';
   static const systemWelcome = '/system_welcome';
-
 }

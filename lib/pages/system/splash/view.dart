@@ -16,8 +16,15 @@ class SplashPage extends GetView<SplashController> {
         GetBuilder<SplashController>(
           id: "splash_title",
           builder: (_) {
-            return Center(
-              child: Text("SplashPage - ${ConfigService.to.version}"),
+            return Column(
+              children: [
+                Center(
+                  child: Text("SplashPage - ${ConfigService.to.version}"),
+                ),
+                ElevatedButton(onPressed: (){
+                  Get.toNamed(RouteNames.stylesStylesIndex);
+                }, child: Text('sty'))
+              ],
             );
           },
         ),

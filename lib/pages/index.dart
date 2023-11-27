@@ -17,6 +17,7 @@ export 'my/profile_edit/index.dart';
 export 'my/theme/index.dart';
 export 'search/search_filter/index.dart';
 export 'search/search_index/index.dart';
+export 'styles/styles_index/index.dart';
 export 'system/login/index.dart';
 export 'system/main/index.dart';
 export 'system/register/index.dart';

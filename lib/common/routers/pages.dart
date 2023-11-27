@@ -81,6 +81,10 @@ class RoutePages {
       page: () => const SearchIndexPage(),
     ),
     GetPage(
+      name: RouteNames.stylesStylesIndex,
+      page: () => const StylesIndexPage(),
+    ),
+    GetPage(
       name: RouteNames.systemLogin,
       page: () => const LoginPage(),
     ),
