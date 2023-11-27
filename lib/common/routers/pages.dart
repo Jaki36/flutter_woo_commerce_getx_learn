@@ -112,5 +112,9 @@ class RoutePages {
       name: RouteNames.systemWelcome,
       page: () => const WelcomePage(),
     ),
+    GetPage(
+      name: RouteNames.stylesIcon,
+      page: () => const IconPage(),
+    ),
   ];
 }

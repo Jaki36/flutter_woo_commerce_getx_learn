@@ -27,7 +27,11 @@ class StylesIndexPage extends GetView<StylesIndexController> {
       ),
       ListTile(
         title:  TextWidget.title1("Text 文本",color: Colors.blue,),
-
+      ),
+      // Icon 图标
+      ListTile(
+        onTap: () => Get.toNamed(RouteNames.stylesIcon),
+        title: const TextWidget.body1("Icon 图标",color: Colors.blue,),
       ),
     ]);
   }
