@@ -28,5 +28,5 @@ class RouteNames {
   static const systemUserAgreement = '/system_user_agreement';
   static const systemWelcome = '/system_welcome';
   static const stylesIcon = '/styles_icon';
-
+  static const stylesImage = '/styles_image';
 }
