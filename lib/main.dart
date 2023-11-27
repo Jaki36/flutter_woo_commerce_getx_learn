@@ -3,6 +3,8 @@ import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'package:flutter_woo_commerce_getx_learn/global.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
+import 'common/style/index.dart';
+
 
 Future<void> main() async {
   await Global.init();
@@ -16,11 +18,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ConfigService.to.theme, // ConfigService.to.isDarkModel ? AppTheme.dark : AppTheme.light,
       debugShowCheckedModeBanner: false,
       initialRoute: RouteNames.systemSplash,
+      // 路由
+      // initialRoute: RouteNames.stylesStylesIndex,
       getPages: RoutePages.list,
       navigatorObservers: [RoutePages.observer],
       // 多语言

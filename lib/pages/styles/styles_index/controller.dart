@@ -20,6 +20,12 @@ class StylesIndexController extends GetxController {
             : en);
     update(["styles_index"]);
   }
+  // 主题
+  onThemeSelected() async {
+    await ConfigService.to.switchThemeModel();
+    update(["styles_index"]);
+  }
+
   void onTap() {}
 
   // @override
