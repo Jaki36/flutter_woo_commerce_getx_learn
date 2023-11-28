@@ -124,5 +124,9 @@ class RoutePages {
       name: RouteNames.stylesButtons,
       page: () => const ButtonsPage(),
     ),
+    GetPage(
+      name: RouteNames.stylesInputs,
+      page: () => const InputsPage(),
+    ),
   ];
 }
