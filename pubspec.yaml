@@ -45,6 +45,12 @@ dependencies:
   badges: 3.1.1
   extended_image: ^8.2.0
   flutter_screenutil: ^5.9.0
+  flutter_native_splash: ^2.2.16
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/icons/launcher_android.png"
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
