@@ -8,6 +8,8 @@ class WelcomeController extends GetxController {
   WelcomeController();
 
   List<WelcomeModel>? items;
+  // 当前位置
+  int currentIndex = 0;
 
   _initData() {
     items = [
@@ -29,22 +31,14 @@ class WelcomeController extends GetxController {
     ];
     update(["slider"]);
   }
-
+  // 当前位置发生改变
+  void onPageChanged(int index) {
+    currentIndex = index;
+    update(['slider', 'bar']);
+  }
   @override
   void onReady() {
     super.onReady();
     _initData();
   }
-
-  void onTap() {}
-
-  // @override
-  // void onInit() {
-  //   super.onInit();
-  // }
-
-  // @override
-  // void onClose() {
-  //   super.onClose();
-  // }
 }
