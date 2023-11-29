@@ -21,6 +21,8 @@ class ConfigService extends GetxService {
   final RxBool _isDarkModel = Get.isDarkMode.obs;
   bool get isDarkModel => _isDarkModel.value;
   ThemeData get theme => isDarkModel ? AppTheme.dark : AppTheme.light;
+// 是否首次打开
+  bool get isAlreadyOpen => Storage().getBool(Constants.storageAlreadyOpen);
 
   @override
   void onReady() {
@@ -76,5 +78,9 @@ class ConfigService extends GetxService {
     Get.changeTheme(
       themeCode == "dark" ? AppTheme.dark : AppTheme.light,
     );
+  }
+  // 标记已打开app
+  void setAlreadyOpen() {
+    Storage().setBool(Constants.storageAlreadyOpen, true);
   }
 }

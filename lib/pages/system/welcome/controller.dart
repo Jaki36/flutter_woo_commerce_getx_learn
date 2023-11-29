@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../../common/i18n/locale_keys.dart';
 import '../../../common/models/welcome_model.dart';
 import '../../../common/routers/names.dart';
+import '../../../common/services/config.dart';
 import '../../../common/values/index.dart';
 
 class WelcomeController extends GetxController {
@@ -54,6 +55,7 @@ class WelcomeController extends GetxController {
   @override
   void onReady() {
     super.onReady();
+    ConfigService().setAlreadyOpen();
     _initData();
   }
 }

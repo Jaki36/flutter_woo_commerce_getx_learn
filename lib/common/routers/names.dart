@@ -31,4 +31,5 @@ class RouteNames {
   static const stylesImage = '/styles_image';
   static const stylesButtons = '/styles_buttons';
   static const stylesInputs = '/styles_inputs';
+
 }

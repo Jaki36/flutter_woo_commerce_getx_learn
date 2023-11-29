@@ -128,5 +128,10 @@ class RoutePages {
       name: RouteNames.stylesInputs,
       page: () => const InputsPage(),
     ),
+    // app 首页
+    GetPage(
+      name: RouteNames.main,
+      page: () => const MainPage(),
+    ),
   ];
 }

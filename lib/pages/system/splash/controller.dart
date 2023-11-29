@@ -2,6 +2,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 
 import '../../../common/routers/names.dart';
+import '../../../common/services/config.dart';
 
 class SplashController extends GetxController {
   SplashController();
@@ -27,7 +28,13 @@ class SplashController extends GetxController {
     super.onReady();
     // 删除设备启动图
     FlutterNativeSplash.remove(); // 删除设备启动图
-    _jumpToPage(); // 跳转界面
+    // _jumpToPage(); // 跳转界面
+    // 样式配置
+    if (ConfigService.to.isAlreadyOpen == false) {
+      Get.offAllNamed(RouteNames.systemWelcome);
+    } else {
+      Get.offAllNamed(RouteNames.main);
+    }
   }
 
   // @override
