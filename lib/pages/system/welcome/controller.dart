@@ -1,7 +1,9 @@
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:get/get.dart';
 
 import '../../../common/i18n/locale_keys.dart';
 import '../../../common/models/welcome_model.dart';
+import '../../../common/routers/names.dart';
 import '../../../common/values/index.dart';
 
 class WelcomeController extends GetxController {
@@ -10,6 +12,8 @@ class WelcomeController extends GetxController {
   List<WelcomeModel>? items;
   // 当前位置
   int currentIndex = 0;
+  bool isShowStart = false; // 是否显示 Start
+  CarouselController carouselController = CarouselController(); // slider 控制器
 
   _initData() {
     items = [
@@ -34,8 +38,19 @@ class WelcomeController extends GetxController {
   // 当前位置发生改变
   void onPageChanged(int index) {
     currentIndex = index;
+    isShowStart = currentIndex == 2;
     update(['slider', 'bar']);
   }
+  // 去首页
+  void onToMain() {
+    Get.offAllNamed(RouteNames.systemMain);
+  }
+
+  // 下一个
+  void onNext() {
+    carouselController.nextPage();
+  }
+
   @override
   void onReady() {
     super.onReady();

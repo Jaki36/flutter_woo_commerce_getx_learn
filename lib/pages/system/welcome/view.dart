@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_woo_commerce_getx_learn/common/extension/ex_list.dart';
+import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'package:get/get.dart';
 
 import '../../../common/components/slider_indicator.dart';
@@ -19,11 +21,11 @@ class WelcomePage extends GetView<WelcomeController> {
       controller.items == null
           ? const SizedBox()
           : WelcomeSliderWidget(
-        controller.items!,
-        onPageChanged: (index) {
-          controller.onPageChanged(index);
-        },
-        // carouselController: null,
+              controller.items!,
+              onPageChanged: (index) {
+              controller.onPageChanged(index);
+              },
+        carouselController: controller.carouselController,
       ),
     );
   }
@@ -33,17 +35,44 @@ class WelcomePage extends GetView<WelcomeController> {
       id: "bar",
       init: controller,
       builder: (controller) {
-        return <Widget>[
-          // 指示标
-          SliderIndicatorWidget(
-            length: 3,
-            currentIndex: controller.currentIndex,
-          ),
-        ].toRow(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-        );
+        return controller.isShowStart
+            ? _buildStartWidget(controller) : _buildIndicratorWidget(controller);
       },
     );
+  }
+
+  Widget _buildStartWidget(WelcomeController controller) {
+    return // 开始
+      ButtonWidget.primary(
+        LocaleKeys.welcomeStart.tr,
+        onTap: controller.onToMain,
+      ).tight(
+        width: double.infinity,
+        height: 50.h,
+      );
+  }
+
+  Widget _buildIndicratorWidget(WelcomeController controller) {
+    return <Widget>[
+      // 跳过
+      ButtonWidget.text(
+        LocaleKeys.welcomeSkip.tr,
+        onTap: controller.onToMain,
+      ),
+        // 指示标
+        SliderIndicatorWidget(
+          length: 3,
+          currentIndex: controller.currentIndex,
+        ),
+      // 下一页
+      ButtonWidget.text(
+        LocaleKeys.welcomeNext.tr,
+        onTap: controller.onNext,
+      ),
+
+    ].toRow(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      );
   }
   // 内容页
   Widget _buildView() {
