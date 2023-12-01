@@ -29,4 +29,9 @@ Map<String, String> localeZh = {
   LocaleKeys.welcomeSkip: '跳过',
   LocaleKeys.welcomeNext: '下一页',
   LocaleKeys.welcomeStart: '立刻开始',
+  // APP 导航
+  LocaleKeys.tabBarHome: '首页',
+  LocaleKeys.tabBarCart: '购物车',
+  LocaleKeys.tabBarMessage: '消息',
+  LocaleKeys.tabBarProfile: '我的',
 };

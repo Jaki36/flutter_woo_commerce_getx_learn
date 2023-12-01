@@ -23,4 +23,9 @@ class LocaleKeys {
   static const welcomeSkip = 'welcome_skip';
   static const welcomeNext = 'welcome_next';
   static const welcomeStart = 'welcome_start';
+  // APP 主导航
+  static const tabBarHome = 'tab_bar_home';
+  static const tabBarCart = 'tab_bar_cart';
+  static const tabBarMessage = 'tab_bar_message';
+  static const tabBarProfile = 'tab_bar_profile';
 }

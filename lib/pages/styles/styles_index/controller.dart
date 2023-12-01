@@ -1,3 +1,4 @@
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 
 import '../../../common/i18n/translation.dart';
@@ -36,6 +37,7 @@ class StylesIndexController extends GetxController {
   @override
   void onReady() {
     super.onReady();
+    FlutterNativeSplash.remove(); // 删除设备启动图
     _initData();
   }
 

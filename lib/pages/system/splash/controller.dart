@@ -27,7 +27,7 @@ class SplashController extends GetxController {
   void onReady() {
     super.onReady();
     // 删除设备启动图
-    FlutterNativeSplash.remove(); // 删除设备启动图
+    FlutterNativeSplash.remove(); // 删除设备启动图 - 显示第一个page就要关闭FlutterNativeSplash插件。
     // _jumpToPage(); // 跳转界面
     // 样式配置
     if (ConfigService.to.isAlreadyOpen == false) {

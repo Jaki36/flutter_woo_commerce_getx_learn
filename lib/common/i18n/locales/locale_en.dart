@@ -29,4 +29,9 @@ Map<String, String> localeEn = {
   LocaleKeys.welcomeSkip: 'Skip',
   LocaleKeys.welcomeNext: 'Next',
   LocaleKeys.welcomeStart: 'Get Started',
+  // APP 导航
+  LocaleKeys.tabBarHome: 'Home',
+  LocaleKeys.tabBarCart: 'Cart',
+  LocaleKeys.tabBarMessage: 'Message',
+  LocaleKeys.tabBarProfile: 'Profile',
 };

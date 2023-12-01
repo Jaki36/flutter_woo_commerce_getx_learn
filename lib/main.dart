@@ -24,11 +24,11 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return GetMaterialApp(
           title: 'Flutter Demo',
-          theme: ConfigService.to.theme, // ConfigService.to.isDarkModel ? AppTheme.dark : AppTheme.light,
+          // theme: ConfigService.to.theme, // ConfigService.to.isDarkModel ? AppTheme.dark : AppTheme.light,
           debugShowCheckedModeBanner: false,
-          // initialRoute: RouteNames.systemSplash,
           // 路由
-          initialRoute: RouteNames.systemSplash, // .stylesStylesIndex,
+          // initialRoute: RouteNames.stylesStylesIndex,
+          initialRoute: RouteNames.systemSplash,
           getPages: RoutePages.list,
           navigatorObservers: [RoutePages.observer],
           // 多语言

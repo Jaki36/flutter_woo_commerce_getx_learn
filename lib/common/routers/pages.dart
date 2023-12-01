@@ -133,5 +133,9 @@ class RoutePages {
       name: RouteNames.main,
       page: () => const MainPage(),
     ),
+    GetPage(
+      name: RouteNames.stylesTextForm,
+      page: () => const TextFormPage(),
+    ),
   ];
 }
