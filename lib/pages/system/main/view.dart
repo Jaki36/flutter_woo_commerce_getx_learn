@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_woo_commerce_getx_learn/pages/goods/home/index.dart';
 import 'package:get/get.dart';
 
 import '../../../common/i18n/locale_keys.dart';
@@ -85,7 +86,7 @@ class _MainViewGetX extends GetView<MainController> {
           onPageChanged: controller.onIndexChanged,
           children: const [
             // 加入空页面占位
-            Text("1"),
+            HomePage(),
             Text("2"),
             Text("3"),
             Text("4"),
